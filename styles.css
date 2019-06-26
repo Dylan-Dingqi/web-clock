@@ -23,6 +23,7 @@ h1 {
     margin-top: 0;
     font-size: 5em;
     color: white;
+    letter-spacing: 5px;
 }
 h1 span {
     display: inline-block;
@@ -39,7 +40,8 @@ h2 {
 
 @media only screen and (max-width: 576px) {
     h1 {
-        font-size: 2.5em;
+        font-size: 2.7em;
+        letter-spacing: inherit;
     }
     h1 span {
         display: inline-block;
@@ -47,8 +49,13 @@ h2 {
     }
     h2 {
         font-size: 1em;
+        margin-bottom: 0.7em;
+    }
+    h2 span{
         margin-bottom: 0.3em;
     }
+}
+@media only screen and (max-width: 375px) {
     .day {
         display: block;
     }
