@@ -5,11 +5,13 @@ html {
 body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
+    /* overflow: hidden; */
 }
 .page {
     background: url("img/noaa-99F4mC79j1I-unsplash.jpg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -37,6 +39,40 @@ h2 {
 .day {
     margin-right: 10px;
 }
+
+.set_bg {
+    position: fixed;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    bottom: 0;
+    text-align: center;
+    align-items:center;
+    /* background: black; */
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    /* background: black; */
+}
+.set_bg:hover {
+    opacity: 0.6;
+}
+button,input {
+    font-family: 'Orbitron', sans-serif;
+    background: black;
+    color: white;
+    height: 30px;
+    border: none;
+}
+input {
+    width: 70%;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    margin-bottom: 10px;
+}
+
 
 @media only screen and (max-width: 576px) {
     h1 {

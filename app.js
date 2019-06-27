@@ -39,3 +39,32 @@ function tick() {
 }
 // tick();
 setInterval(tick, 100);
+
+var count = 0;
+var url = ["img/noaa-99F4mC79j1I-unsplash.jpg", 
+            "img/photo-1560471828-3c91fd5f25d1.jpg",
+            "img/claudio-testa--SO3JtE3gZo-unsplash.jpg",
+            "img/photo-1548407260-da850faa41e3.jpg",
+            ];
+var btn = document.querySelector(".set_bg_btn");
+var change_btn = document.querySelector(".change_bg_btn");
+var input = document.querySelector("input");
+var page = document.querySelector(".page");
+
+
+btn.addEventListener("click", setBackground);
+change_btn.addEventListener("click", changeBackground);
+
+function setBackground() {
+    if (input.value == ""){
+        page.style.backgroundImage = "url(img/noaa-99F4mC79j1I-unsplash.jpg)";
+    }
+    else {
+        page.style.backgroundImage = "url(" +  input.value + ")";
+    }
+}
+function changeBackground() {
+    count += 1;
+    count = count % url.length;
+    page.style.backgroundImage = "url(" +  url[count] + ")";
+}
