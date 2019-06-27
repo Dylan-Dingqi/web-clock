@@ -77,9 +77,14 @@ input {
     right:5px;
     top: 5px;
     opacity: 0;
+    display:none;
 }
 
-
+@media only screen and (max-width: 768px) {
+    .close_btn{
+        display: block;
+    }
+}
 @media only screen and (max-width: 576px) {
     h1 {
         font-size: 2.7em;
