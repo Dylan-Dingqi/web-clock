@@ -40,7 +40,8 @@ function tick() {
 // tick();
 setInterval(tick, 100);
 
-var count = 0;
+var count = Math.floor(Math.random() * 4);
+
 var url = ["img/noaa-99F4mC79j1I-unsplash.jpg", 
             "img/photo-1560471828-3c91fd5f25d1.jpg",
             "img/claudio-testa--SO3JtE3gZo-unsplash.jpg",
@@ -50,6 +51,9 @@ var btn = document.querySelector(".set_bg_btn");
 var change_btn = document.querySelector(".change_bg_btn");
 var input = document.querySelector("input");
 var page = document.querySelector(".page");
+
+//random wallpaper at start
+page.style.backgroundImage = "url(" +  url[count] + ")";
 
 
 btn.addEventListener("click", setBackground);
